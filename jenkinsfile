@@ -1,0 +1,8 @@
+node('master') {
+    stage 'Cloning'
+    git credentialsId: 'c6b9fc5c-8959-4f2f-b112-3adab96f5ee3', url: 'https://github.com/RashmiJose/MavenGit.git'
+    stage 'Clean'
+    bat 'mvn clean'
+    stage 'Install'
+    bat 'mvn install'
+}
